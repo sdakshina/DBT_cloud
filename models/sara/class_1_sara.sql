@@ -1,0 +1,1 @@
+select c_custkey, c_name, c_address from customer
