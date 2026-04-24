@@ -1,1 +1,0 @@
-select * from japan.dev.customers

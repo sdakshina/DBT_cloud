@@ -1,1 +1,1 @@
-select customer_id,concat(first_name,' ',last_name) as full_name,email,phone from japan.dbt_sb.customer_dak
+select customer_id,concat(first_name,' ',last_name) as full_name,email,phone from {{ref('customer_dak')}}
