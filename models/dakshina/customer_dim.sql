@@ -1,5 +1,5 @@
 {{
-    config(materialized='table')    
+    config(materialized='incremental')    
 }}
 
 select 
@@ -10,5 +10,11 @@ phone,
 address,
 city,
 country,
-current_timestamp() as created_at
- from {{ref('customer_stg')}}
+CREATED_AT,
+current_timestamp() as inserted_dt
+ from {{ref('customer_stg')}} 
+
+
+ {%if is_incremental%}
+ where created_at> (select max(created_at) from japan.dbt_sb.customer_dim)
+ {%endif%}
