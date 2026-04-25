@@ -36,3 +36,5 @@ models:
     #   +materialized: view
    dakshina:
       +materialized: table
+   sara:
+      +materialized: table

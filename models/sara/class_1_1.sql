@@ -1,0 +1,1 @@
+select customer_id, first_name, last_name, email, phone,country from japan.dev.customers
