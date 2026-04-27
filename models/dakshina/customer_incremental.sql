@@ -10,11 +10,9 @@ phone,
 address,
 city,
 country,
-CREATED_AT,
 current_timestamp() as inserted_dt
- from {{ref('customer_stg')}} 
+ from {{ref('customer_stg')}} as src
 
-
- {%if is_incremental%}
- where created_at> (select max(created_at) from japan.dbt_sb.customer_dim)
+ {%if is_incremental()%}
+ where src.created_at > (select max(inserted_dt) from {{this}})
  {%endif%}
