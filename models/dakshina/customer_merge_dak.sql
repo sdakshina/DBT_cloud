@@ -4,7 +4,7 @@
         materialized='incremental',
         incremental_strategy='merge',
         unique_key=['customer_id'],
-        merge_update_columns=['Name','email','phone','address']
+        merge_update_columns=['Name','email','phone','address','INSERTED_DT']
     )
 }}
 
@@ -16,5 +16,5 @@ phone,
 address,
 city,
 country,
-created_at
+src.created_at as INSERTED_DT
  from {{ref('customer_stg')}} as src
