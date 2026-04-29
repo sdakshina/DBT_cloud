@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: DEV
+    schema: DEV
+    database: JAPAN
+    description: "Raw data ingested from snowflake systems."
+    tables:
+      - name: customers
+        # identifier: customers
+        description: "Customer master data from CRM."
+
+

@@ -1,0 +1,6 @@
+employee_id,first_name,last_name,email,phone,department,salary,join_date
+101,John,Doe,john.doe@gmail.com,9876543210,IT,60000,2022-01-15
+102,Jane,Smith,jane.smith@gmail.com,9876543211,HR,50000,2021-11-20
+103,Ravi,Kumar,ravi.kumar@gmail.com,9876543212,Finance,55000,2023-03-10
+104,Anita,Sharma,anita.sharma@gmail.com,9876543213,IT,62000,2020-07-25
+105,Arun,Raj,arun.raj@gmail.com,9876543214,Sales,48000,2022-09-05
