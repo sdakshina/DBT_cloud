@@ -9,5 +9,9 @@ sources:
       - name: customers
         # identifier: customers
         description: "Customer master data from CRM."
-
+        columns:
+          - name: customer_id
+            tests:
+              - not_null
+              - unique
 

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: customer_stg
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: gender
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['M','F','T']
+          
