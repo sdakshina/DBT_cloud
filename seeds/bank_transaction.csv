@@ -1,0 +1,6 @@
+transaction_id,account_number,customer_name,transaction_type,amount,available_balance
+TXN1001,ACC001,Ravi,CREDIT,5000,25000
+TXN1002,ACC002,John,DEBIT,3000,15000
+TXN1003,,Mary,CREDIT,7000,22000
+TXN1001,ACC001,Ravi,CREDIT,5000,25000
+TXN1004,ACC004,Sam,DEBIT,1000000,-5000
