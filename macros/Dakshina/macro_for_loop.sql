@@ -2,6 +2,8 @@
 {%set z=[a,b]%}
 {%for i in z%}
 upper({{i}})
-{% if not loop.first %}, {% endif %}
+{% if not loop.end %}
+, 
+{%endif%}
 {%endfor%}
 {%endmacro%}
