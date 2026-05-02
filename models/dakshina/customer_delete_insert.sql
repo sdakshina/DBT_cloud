@@ -1,7 +1,9 @@
 {{
     config(materialized='incremental',
     incremental_strategy='delete+insert',
-    unique_key='customer_id')
+    unique_key='customer_id',
+    pre_hook=["{{pre_hook_job_audit()}}"],
+    post_hook=["{{post_hook_job_audit()}}"])
 }}
 
 select 

@@ -1,5 +1,7 @@
 {{
-    config(materialized='incremental')    
+    config(materialized='incremental',
+    pre_hook=["{{pre_hook_job_audit()}}"],
+    post_hook=["{{post_hook_job_audit()}}"])    
 }}
 
 select 

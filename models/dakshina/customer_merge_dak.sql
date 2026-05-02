@@ -4,7 +4,9 @@
         materialized='incremental',
         incremental_strategy='merge',
         unique_key=['customer_id'],
-        merge_update_columns=['Name','email','phone','address','INSERTED_DT']
+        merge_update_columns=['Name','email','phone','address','INSERTED_DT'],
+        pre_hook=["{{pre_hook_job_audit()}}"],
+    post_hook=["{{post_hook_job_audit()}}"]
     )
 }}
 

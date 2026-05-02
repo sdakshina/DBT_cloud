@@ -1,0 +1,1 @@
+select * from {{source('dev','account_master_src')}}
