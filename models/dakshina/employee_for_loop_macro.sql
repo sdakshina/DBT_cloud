@@ -1,0 +1,1 @@
+select {{macro_for_loop('first_name','last_name')}} from {{source('DEV','customers')}}

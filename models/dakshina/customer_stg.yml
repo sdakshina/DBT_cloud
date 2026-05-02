@@ -12,4 +12,16 @@ models:
           - accepted_values:
               arguments:
                 values: ['M','F','T']
-          
+  - name: customer_insert_overwrite
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments: 
+            compare_model: "{{source('DEV','customers')}}"
+      - dbt_utils.equality:
+          arguments: 
+            compare_model: "{{source('DEV','customers')}}"
+            compare_columns:
+              - first_name
+              - last_name
+                
+

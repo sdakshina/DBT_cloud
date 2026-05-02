@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_account_master_src
+    columns:
+      - name: account_id
+        tests:
+          - not_null
+          - unique
+      - name: account_type
+        tests:
+          - not_null
+          - accepted_values:
+             arguments:
+              values: ['SAVINGS','CURRENT']
