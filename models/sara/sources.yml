@@ -6,6 +6,9 @@ sources:
     database: japan
     schema: dev
     tables:
+      - name: bank_audit
+        identifier: audit_bank_transactions
+
       - name: dummy
         identifier: src_bank_transactions
         description: 'this is the table used to store the table transaction'

@@ -21,3 +21,4 @@ sources:
         #     error_after: {count: 24, period: hour}
       - name: job_audit
       - name: src_bank_transactions
+      - name: SALES
