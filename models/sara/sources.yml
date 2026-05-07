@@ -33,3 +33,6 @@ sources:
           - name: branch_code
             tests:
               - not_null     
+
+      - name: SRC_PRODUCT  
+          

@@ -1,0 +1,1 @@
+{{null_test('del_insert_customer','customer_name')}}
