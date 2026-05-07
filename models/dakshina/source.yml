@@ -22,3 +22,4 @@ sources:
       - name: job_audit
       - name: src_bank_transactions
       - name: SALES
+      - name: SALES
