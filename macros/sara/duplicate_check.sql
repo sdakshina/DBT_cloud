@@ -1,6 +1,19 @@
 {% macro duplicate_check(table, pks ) %}
-    select {{pks}}, count(*)
+    select 
+    {% for i in pks %}
+        {{pks}}
+        {% if not loop.last %} 
+            ,
+        {% endif %} 
+    {% endfor %}
+    , count(*)
     from {{ref(table)}}
-    group by {{pks}}
-    having count(*)
+    group by
+    {% for i in pks %}
+        {{pks}}
+        {% if not loop.last %} 
+            ,
+        {% endif %}
+    {% endfor %} 
+    having count(*) >1
 {% endmacro %}

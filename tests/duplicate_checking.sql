@@ -1,1 +1,1 @@
-{{duplicate_check('src_product_tbl','product_id')}}
+{{ duplicate_check('src_product_tbl','product_id') }}
