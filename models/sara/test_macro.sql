@@ -1,1 +1,1 @@
-{{duplicate_check('src_product_tbl',['product_id','product_name'])}}
+{{ region_macro('dev','sales_data')}}
